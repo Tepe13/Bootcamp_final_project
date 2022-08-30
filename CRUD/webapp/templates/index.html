@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w3-row-padding w3-margin-top">
+    {% for i in range(0, len - 3) %}
+    <a href="{{ np_list[i]['np_url'] }}" target="_blank">
+        <div class="w3-third">
+            <div class="w3-card">
+                <img src="{{ np_list[i]['np_image_url'] }}" style="width:100%">
+                <div class="w3-container">
+                    <h4>{{ np_list[i]['np_name'] }} ({{ np_list[i]['ed_firstname'] }} {{ np_list[i]['ed_lastname'] }})
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+<div class="w3-row-padding w3-margin-top">
+    {% for i in range(3, len) %}
+    <a href="">
+        <div class="w3-third">
+            <div class="w3-card">
+                <img src="{{ np_list[i]['np_image_url'] }}" style="width:100%">
+                <div class="w3-container">
+                    <h4>{{ np_list[i]['np_name'] }} ({{ np_list[i]['ed_firstname'] }} {{ np_list[i]['ed_lastname'] }})
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+
+{% endblock %}
